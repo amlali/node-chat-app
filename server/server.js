@@ -9,9 +9,14 @@ const server=http.createServer(app);
 var io=socketIO(server);
 app.use(express.static(publicPath));
 
-io.on('connection',()=>{
+io.on('connection',(socket)=>{
   console.log("connected");
+
+  socket.on('create message',(massage)=>{
+    console.log(massage);
+  });
 });
+
 server.listen(port,()=>{
   console.log(`listen to port${port}`);
 });
