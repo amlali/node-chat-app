@@ -2,13 +2,23 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <script src='/socket.io/socket.io.js'></script>
 
-    <script src="/js/index.js" ></script>
     <title>New index for chat</title>
   </head>
   <body>
     <p>welcome new chat</p>
+    <form id="message-form">
+      <input type="text" name="message" placeholder="message"/>
+      <button name="Send">sendMessage</button>
 
+    </form>
+    <button id="Send-geolocation">sendLocation</button>
+
+    <ul id="messages">
+
+    </ul>
+    <script src='/socket.io/socket.io.js'></script>
+    <script src="/js/libs/jquery-3.3.1.min.js" ></script>
+    <script src="/js/index.js" ></script>
   </body>
 </html>
